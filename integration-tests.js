@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('should work with string keys', t => {
     var heap = new Heap();

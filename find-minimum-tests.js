@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('should return the minimum item from the heap', t => {
     var heap = new Heap();

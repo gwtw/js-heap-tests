@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   function wrapBuildHeap(keys, values) {
     return function () {

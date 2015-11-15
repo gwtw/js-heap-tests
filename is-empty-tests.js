@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('should return whether the heap is empty', t => {
     var heap = new Heap();

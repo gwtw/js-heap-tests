@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('should give a min heap given a non-reverse customCompare', t => {
     var heap = new Heap(function (a, b) {

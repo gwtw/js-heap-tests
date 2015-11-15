@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('extract-min should return undefined on an empty heap', t => {
     var heap = new Heap();

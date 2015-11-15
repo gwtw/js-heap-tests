@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('should set the heap\'s size to 0', t => {
     var heap = new Heap();

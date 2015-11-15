@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports.run = function (test, Heap) {
   test('should union the 2 heaps together given 2 heaps of size 5 with overlapping elements added in order together', t => {
     var heap = new Heap();
