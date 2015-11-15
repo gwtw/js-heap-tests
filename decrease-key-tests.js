@@ -3,7 +3,7 @@
 module.exports.run = function (test, Heap) {
   test('should throw an exception given a non-existent node', function (t) {
     var heap = new Heap();
-    t.throws(() => {
+    t.throws(function () {
       heap.decreaseKey(undefined, 2);
     });
     t.end();
@@ -11,7 +11,7 @@ module.exports.run = function (test, Heap) {
 
   test('should throw an exception given a new key larger than the old key', function (t) {
     var heap = new Heap();
-    t.throws(() => {
+    t.throws(function () {
       var node = heap.insert(1, null);
       heap.decreaseKey(node, 2);
     });
