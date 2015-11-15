@@ -4,6 +4,22 @@
 
 A set of JavaScript heap data structure tests.
 
+### Install
+
+```bash
+npm install --save-dev @tyriar/heap-tests
+```
+
+### Usage
+
+```js
+import Heap from '../';
+import test from 'ava';
+import testHelper from '@tyriar/heap-tests/insert-tests';
+
+testHelper.run(test, Heap);
+```
+
 ### See also
 
 - [js-data-structures](https://github.com/Tyriar/js-data-structures)
