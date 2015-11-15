@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('should return the size of the heap', t => {
+  test('should return the size of the heap', function (t) {
     var heap = new Heap();
     t.is(heap.size(), 0);
     heap.insert(1, null);

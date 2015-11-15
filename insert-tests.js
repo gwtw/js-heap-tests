@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('should insert items into the heap', t => {
+  test('should insert items into the heap', function (t) {
     var heap = new Heap();
     heap.insert(1, null);
     heap.insert(2, null);
@@ -12,7 +12,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should return the inserted node', t => {
+  test('should return the inserted node', function (t) {
     var heap = new Heap();
     var ret = heap.insert(1, {foo: 'bar'});
     t.is(ret.key, 1);

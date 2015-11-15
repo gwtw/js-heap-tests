@@ -7,7 +7,7 @@ module.exports.run = function (test, Heap) {
     };
   }
 
-  test('should throw if constructing with different number of keys and values', t => {
+  test('should throw if constructing with different number of keys and values', function (t) {
     t.throws(wrapBuildHeap([], [1]));
     t.throws(wrapBuildHeap([1], []));
     t.throws(wrapBuildHeap([1], [1, 2]));
@@ -17,19 +17,19 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should not throw if constructing with undefined values', t => {
+  test('should not throw if constructing with undefined values', function (t) {
     t.doesNotThrow(wrapBuildHeap([1]));
     t.end();
   });
 
-  test('should not throw if constructing with same number of keys and values', t => {
+  test('should not throw if constructing with same number of keys and values', function (t) {
     t.doesNotThrow(wrapBuildHeap([], []));
     t.doesNotThrow(wrapBuildHeap([1], [1]));
     t.doesNotThrow(wrapBuildHeap([1, 2], [1, 2]));
     t.end();
   });
 
-  test('should construct a valid heap with keys only', t => {
+  test('should construct a valid heap with keys only', function (t) {
     var keys = [5, 8, 9, 1, 2, 6, 3, 7, 4];
     var heap = new Heap();
     heap.buildHeap(keys);
@@ -47,7 +47,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should construct a valid heap with keys and values', t => {
+  test('should construct a valid heap with keys and values', function (t) {
     var keys = [5, 8, 9, 1, 2, 6, 3, 7, 4];
     var values = ['e', 'h', 'i', 'a', 'b', 'f', 'c', 'g', 'd'];
     var heap = new Heap();

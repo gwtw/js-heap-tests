@@ -1,13 +1,13 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('extract-min should return undefined on an empty heap', t => {
+  test('extract-min should return undefined on an empty heap', function (t) {
     var heap = new Heap();
     t.is(heap.extractMinimum(), undefined);
     t.end();
   });
 
-  test('should extract the minimum item from a heap', t => {
+  test('should extract the minimum item from a heap', function (t) {
     var heap = new Heap();
     var node5 = heap.insert(5, null);
     var node3 = heap.insert(3, null);
@@ -22,7 +22,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should extract the minimum item from a jumbled heap', t => {
+  test('should extract the minimum item from a jumbled heap', function (t) {
     var heap = new Heap();
     var node1 = heap.insert(1, null);
     var node4 = heap.insert(4, null);
@@ -37,7 +37,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should extract the minimum item from a heap containing negative items', t => {
+  test('should extract the minimum item from a heap containing negative items', function (t) {
     var heap = new Heap();
     var node1 = heap.insert(-9, null);
     var node4 = heap.insert(6, null);

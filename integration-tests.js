@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('should work with string keys', t => {
+  test('should work with string keys', function (t) {
     var heap = new Heap();
     var node3 = heap.insert('f', null);
     var node4 = heap.insert('o', null);
@@ -18,7 +18,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should give an empty heap after inserting and extracting 1000 in-order elements', t => {
+  test('should give an empty heap after inserting and extracting 1000 in-order elements', function (t) {
     var heap = new Heap();
     for (let i = 0; i < 1000; i++) {
       heap.insert(i, i);
@@ -30,7 +30,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should give an empty heap after inserting and extracting 1000 reversed elements', t => {
+  test('should give an empty heap after inserting and extracting 1000 reversed elements', function (t) {
     var heap = new Heap();
     for (let i = 0; i < 1000; i++) {
       heap.insert(i, i);
@@ -42,7 +42,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should give an empty heap after inserting and extracting 1000 pseudo-randomized elements', t => {
+  test('should give an empty heap after inserting and extracting 1000 pseudo-randomized elements', function (t) {
     var heap = new Heap();
     for (let i = 0; i < 1000; i++) {
       if (i % 2 === 0) {
@@ -58,7 +58,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should handle 1000 shuffled elements', t => {
+  test('should handle 1000 shuffled elements', function (t) {
     var heap = new Heap();
     var input = [];
     for (let i = 0; i < 1000; i++) {

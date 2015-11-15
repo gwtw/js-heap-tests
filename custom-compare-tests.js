@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('should give a min heap given a non-reverse customCompare', t => {
+  test('should give a min heap given a non-reverse customCompare', function (t) {
     var heap = new Heap(function (a, b) {
       return a.key - b.key;
     });
@@ -20,7 +20,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should give a max heap given a reverse customCompare', t => {
+  test('should give a max heap given a reverse customCompare', function (t) {
     var heap = new Heap(function (a, b) {
       return b.key - a.key;
     });

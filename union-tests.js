@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('should union the 2 heaps together given 2 heaps of size 5 with overlapping elements added in order together', t => {
+  test('should union the 2 heaps together given 2 heaps of size 5 with overlapping elements added in order together', function (t) {
     var heap = new Heap();
     heap.insert(0, null);
     heap.insert(2, null);
@@ -26,7 +26,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should union the 2 heaps together given 2 heaps of size 5 with overlapping elements added in reverse order together', t => {
+  test('should union the 2 heaps together given 2 heaps of size 5 with overlapping elements added in reverse order together', function (t) {
     var heap = new Heap();
     heap.insert(9, null);
     heap.insert(7, null);
@@ -51,7 +51,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should union the 2 heaps together', t => {
+  test('should union the 2 heaps together', function (t) {
     var heaps = constructJumbledHeaps(t);
     heaps[0].union(heaps[1]);
     t.is(heaps[0].size(), 10);
@@ -62,7 +62,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should union the 2 heaps together after extracting the minimum from each', t => {
+  test('should union the 2 heaps together after extracting the minimum from each', function (t) {
     var heaps = constructJumbledHeaps(t);
     t.is(heaps[0].extractMinimum().key, 1);
     t.is(heaps[1].extractMinimum().key, 0);
