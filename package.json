@@ -1,6 +1,6 @@
 {
   "name": "@tyriar/heap-tests",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A set of tests for heap data structures",
   "scripts": {
     "test": "xo"
