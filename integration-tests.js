@@ -20,10 +20,11 @@ module.exports.run = function (test, Heap) {
 
   test('should give an empty heap after inserting and extracting 1000 in-order elements', function (t) {
     var heap = new Heap();
-    for (let i = 0; i < 1000; i++) {
+    var i;
+    for (i = 0; i < 1000; i++) {
       heap.insert(i, i);
     }
-    for (let i = 0; i < 1000; i++) {
+    for (i = 0; i < 1000; i++) {
       heap.extractMinimum();
     }
     t.true(heap.isEmpty());
@@ -32,10 +33,11 @@ module.exports.run = function (test, Heap) {
 
   test('should give an empty heap after inserting and extracting 1000 reversed elements', function (t) {
     var heap = new Heap();
-    for (let i = 0; i < 1000; i++) {
+    var i;
+    for (i = 0; i < 1000; i++) {
       heap.insert(i, i);
     }
-    for (let i = 0; i < 1000; i++) {
+    for (i = 0; i < 1000; i++) {
       heap.extractMinimum();
     }
     t.true(heap.isEmpty());
@@ -44,14 +46,15 @@ module.exports.run = function (test, Heap) {
 
   test('should give an empty heap after inserting and extracting 1000 pseudo-randomized elements', function (t) {
     var heap = new Heap();
-    for (let i = 0; i < 1000; i++) {
+    var i;
+    for (i = 0; i < 1000; i++) {
       if (i % 2 === 0) {
         heap.insert(i, i);
       } else {
         heap.insert(999 - i, 999 - i);
       }
     }
-    for (let i = 0; i < 1000; i++) {
+    for (i = 0; i < 1000; i++) {
       heap.extractMinimum();
     }
     t.true(heap.isEmpty());
@@ -61,18 +64,19 @@ module.exports.run = function (test, Heap) {
   test('should handle 1000 shuffled elements', function (t) {
     var heap = new Heap();
     var input = [];
-    for (let i = 0; i < 1000; i++) {
+    var i;
+    for (i = 0; i < 1000; i++) {
       input.push(i);
     }
     // shuffle
-    for (let i = 0; i < 1000; i++) {
+    for (i = 0; i < 1000; i++) {
       var swapWith = Math.floor(Math.random() * 1000);
       var temp = input[i];
       input[i] = input[swapWith];
       input[swapWith] = temp;
     }
     // insert
-    for (let i = 0; i < 1000; i++) {
+    for (i = 0; i < 1000; i++) {
       heap.insert(input[i], null);
     }
     // extract
