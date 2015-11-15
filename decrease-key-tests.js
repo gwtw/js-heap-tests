@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports.run = function (test, Heap) {
-  test('should throw an exception given a non-existent node', t => {
+  test('should throw an exception given a non-existent node', function (t) {
     var heap = new Heap();
     t.throws(() => {
       heap.decreaseKey(undefined, 2);
@@ -9,7 +9,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should throw an exception given a new key larger than the old key', t => {
+  test('should throw an exception given a new key larger than the old key', function (t) {
     var heap = new Heap();
     t.throws(() => {
       var node = heap.insert(1, null);
@@ -18,7 +18,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should decrease the minimum node', t => {
+  test('should decrease the minimum node', function (t) {
     var heap = new Heap();
     var node1 = heap.insert(1, null);
     heap.insert(2, null);
@@ -29,7 +29,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should decrease and bubble up a non-minimum node', t => {
+  test('should decrease and bubble up a non-minimum node', function (t) {
     var heap = new Heap();
     heap.insert(1, null);
     var node2 = heap.insert(2, null);
@@ -40,7 +40,7 @@ module.exports.run = function (test, Heap) {
     t.end();
   });
 
-  test('should decrease and bubble up a non-minimum node in a large heap', t => {
+  test('should decrease and bubble up a non-minimum node in a large heap', function (t) {
     var heap = new Heap();
     heap.insert(13, null);
     heap.insert(26, null);
