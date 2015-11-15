@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "A set of tests for heap data structures",
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,7 @@
 ## js-heap-tests [![NPM version](https://img.shields.io/npm/v/@tyriar/heap-tests.svg?style=flat)](https://www.npmjs.org/package/@tyriar/heap-tests)
 
+[![Build Status](http://img.shields.io/travis/Tyriar/js-heap-tests.svg?style=flat)](http://travis-ci.org/Tyriar/js-heap-tests)
+
 A set of JavaScript heap data structure tests.
 
 ### See also
