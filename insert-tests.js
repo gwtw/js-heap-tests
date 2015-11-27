@@ -19,4 +19,13 @@ module.exports.run = function (test, Heap) {
     t.same(ret.value, {foo: 'bar'});
     t.end();
   });
+
+  test('should insert multiple items with the same key', function (t) {
+    var heap = new Heap();
+    heap.insert(1, null);
+    heap.insert(1, null);
+    t.is(1, heap.extractMinimum().key);
+    t.is(1, heap.extractMinimum().key);
+    t.end();
+  });
 };
