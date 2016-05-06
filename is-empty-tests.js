@@ -8,6 +8,5 @@ module.exports.run = function (test, Heap) {
     t.false(heap.isEmpty());
     heap.extractMinimum();
     t.true(heap.isEmpty());
-    t.end();
   });
 };

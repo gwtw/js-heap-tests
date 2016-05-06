@@ -4,7 +4,6 @@ module.exports.run = function (test, Heap) {
   test('extract-min should return undefined on an empty heap', function (t) {
     var heap = new Heap();
     t.is(heap.extractMinimum(), undefined);
-    t.end();
   });
 
   test('should extract the minimum item from a heap', function (t) {
@@ -19,7 +18,6 @@ module.exports.run = function (test, Heap) {
     t.same(heap.extractMinimum().key, node3.key);
     t.same(heap.extractMinimum().key, node4.key);
     t.same(heap.extractMinimum().key, node5.key);
-    t.end();
   });
 
   test('should extract the minimum item from a jumbled heap', function (t) {
@@ -34,7 +32,6 @@ module.exports.run = function (test, Heap) {
     t.same(heap.extractMinimum().key, node3.key);
     t.same(heap.extractMinimum().key, node4.key);
     t.same(heap.extractMinimum().key, node5.key);
-    t.end();
   });
 
   test('should extract the minimum item from a heap containing negative items', function (t) {
@@ -49,6 +46,5 @@ module.exports.run = function (test, Heap) {
     t.same(heap.extractMinimum().key, node3.key);
     t.same(heap.extractMinimum().key, node4.key);
     t.same(heap.extractMinimum().key, node5.key);
-    t.end();
   });
 };

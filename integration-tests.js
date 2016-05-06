@@ -15,7 +15,6 @@ module.exports.run = function (test, Heap) {
     t.same(heap.extractMinimum().key, node4.key);
     t.same(heap.extractMinimum().key, node5.key);
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should give an empty heap after inserting and extracting 1000 in-order elements', function (t) {
@@ -28,7 +27,6 @@ module.exports.run = function (test, Heap) {
       heap.extractMinimum();
     }
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should give an empty heap after inserting and extracting 1000 reversed elements', function (t) {
@@ -41,7 +39,6 @@ module.exports.run = function (test, Heap) {
       heap.extractMinimum();
     }
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should give an empty heap after inserting and extracting 1000 pseudo-randomized elements', function (t) {
@@ -58,7 +55,6 @@ module.exports.run = function (test, Heap) {
       heap.extractMinimum();
     }
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should handle 1000 shuffled elements', function (t) {
@@ -91,6 +87,5 @@ module.exports.run = function (test, Heap) {
       counter++;
     }
     t.is(output.length, 1000);
-    t.end();
   });
 };

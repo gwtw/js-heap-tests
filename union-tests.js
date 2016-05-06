@@ -23,7 +23,6 @@ module.exports.run = function (test, Heap) {
       t.is(heap.extractMinimum().key, i);
     }
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should union the 2 heaps together given 2 heaps of size 5 with overlapping elements added in reverse order together', function (t) {
@@ -48,7 +47,6 @@ module.exports.run = function (test, Heap) {
       t.is(heap.extractMinimum().key, i);
     }
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should union the 2 heaps together', function (t) {
@@ -59,7 +57,6 @@ module.exports.run = function (test, Heap) {
       t.is(heaps[0].extractMinimum().key, i);
     }
     t.true(heaps[0].isEmpty());
-    t.end();
   });
 
   test('should union the 2 heaps together after extracting the minimum from each', function (t) {
@@ -72,7 +69,6 @@ module.exports.run = function (test, Heap) {
       t.is(heaps[0].extractMinimum().key, i);
     }
     t.true(heaps[0].isEmpty());
-    t.end();
   });
 
   function constructJumbledHeaps(t) {

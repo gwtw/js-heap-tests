@@ -9,6 +9,5 @@ module.exports.run = function (test, Heap) {
     heap.insert(4, null);
     heap.insert(2, null);
     t.is(heap.findMinimum().key, 1);
-    t.end();
   });
 };

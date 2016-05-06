@@ -17,7 +17,6 @@ module.exports.run = function (test, Heap) {
     t.same(heap.extractMinimum().key, node4.key);
     t.same(heap.extractMinimum().key, node5.key);
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should give a max heap given a reverse customCompare', function (t) {
@@ -36,6 +35,5 @@ module.exports.run = function (test, Heap) {
     t.same(heap.extractMinimum().key, node2.key);
     t.same(heap.extractMinimum().key, node1.key);
     t.true(heap.isEmpty());
-    t.end();
   });
 };

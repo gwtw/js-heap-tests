@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/Tyriar/js-heap-tests",
   "devDependencies": {
+    "eslint-plugin-ava": "^2.3.1",
     "xo": "*"
   },
   "xo": {

@@ -24,6 +24,5 @@ module.exports.run = function (test, Heap) {
     t.is(heap.size(), 9);
     heap.insert(10, null);
     t.is(heap.size(), 10);
-    t.end();
   });
 };

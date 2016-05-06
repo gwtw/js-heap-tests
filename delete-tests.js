@@ -8,7 +8,6 @@ module.exports.run = function (test, Heap) {
     heap.delete(node1);
     t.is(heap.extractMinimum(), node2);
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should delete nodes in a heap with multiple elements', function (t) {
@@ -25,6 +24,5 @@ module.exports.run = function (test, Heap) {
     t.is(heap.extractMinimum(), node4);
     t.is(heap.extractMinimum(), node5);
     t.true(heap.isEmpty());
-    t.end();
   });
 };

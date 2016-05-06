@@ -6,7 +6,6 @@ module.exports.run = function (test, Heap) {
     t.throws(function () {
       heap.decreaseKey(undefined, 2);
     });
-    t.end();
   });
 
   test('should throw an exception given a new key larger than the old key', function (t) {
@@ -15,7 +14,6 @@ module.exports.run = function (test, Heap) {
       var node = heap.insert(1, null);
       heap.decreaseKey(node, 2);
     });
-    t.end();
   });
 
   test('should decrease the minimum node', function (t) {
@@ -26,7 +24,6 @@ module.exports.run = function (test, Heap) {
     var key = heap.findMinimum().key;
     t.same(key, node1.key);
     t.is(key, -3);
-    t.end();
   });
 
   test('should decrease and bubble up a non-minimum node', function (t) {
@@ -37,7 +34,6 @@ module.exports.run = function (test, Heap) {
     var key = heap.findMinimum().key;
     t.same(key, node2.key);
     t.is(key, -3);
-    t.end();
   });
 
   test('should decrease and bubble up a non-minimum node in a large heap', function (t) {
@@ -53,6 +49,5 @@ module.exports.run = function (test, Heap) {
     heap.insert(16, null);
     heap.decreaseKey(node5, -11);
     t.same(heap.findMinimum().key, node5.key);
-    t.end();
   });
 };

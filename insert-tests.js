@@ -9,7 +9,6 @@ module.exports.run = function (test, Heap) {
     heap.insert(4, null);
     heap.insert(5, null);
     t.same(heap.size(), 5);
-    t.end();
   });
 
   test('should return the inserted node', function (t) {
@@ -17,7 +16,6 @@ module.exports.run = function (test, Heap) {
     var ret = heap.insert(1, {foo: 'bar'});
     t.is(ret.key, 1);
     t.same(ret.value, {foo: 'bar'});
-    t.end();
   });
 
   test('should insert multiple items with the same key', function (t) {
@@ -26,6 +24,5 @@ module.exports.run = function (test, Heap) {
     heap.insert(1, null);
     t.is(1, heap.extractMinimum().key);
     t.is(1, heap.extractMinimum().key);
-    t.end();
   });
 };

@@ -14,19 +14,16 @@ module.exports.run = function (test, Heap) {
     t.throws(wrapBuildHeap([1, 2], []));
     t.throws(wrapBuildHeap([1, 2], [1]));
     t.throws(wrapBuildHeap([1, 2], [1, 2, 3]));
-    t.end();
   });
 
   test('should not throw if constructing with undefined values', function (t) {
     t.doesNotThrow(wrapBuildHeap([1]));
-    t.end();
   });
 
   test('should not throw if constructing with same number of keys and values', function (t) {
     t.doesNotThrow(wrapBuildHeap([], []));
     t.doesNotThrow(wrapBuildHeap([1], [1]));
     t.doesNotThrow(wrapBuildHeap([1, 2], [1, 2]));
-    t.end();
   });
 
   test('should construct a valid heap with keys only', function (t) {
@@ -44,7 +41,6 @@ module.exports.run = function (test, Heap) {
     t.is(heap.extractMinimum().key, 8);
     t.is(heap.extractMinimum().key, 9);
     t.true(heap.isEmpty());
-    t.end();
   });
 
   test('should construct a valid heap with keys and values', function (t) {
@@ -81,6 +77,5 @@ module.exports.run = function (test, Heap) {
     t.is(minNode.key, 9);
     t.is(minNode.value, 'i');
     t.true(heap.isEmpty());
-    t.end();
   });
 };
