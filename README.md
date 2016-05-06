@@ -13,8 +13,8 @@ npm install --save-dev @tyriar/heap-tests
 ### Usage
 
 ```js
-import Heap from '../';
 import test from 'ava';
+import Heap from '../';
 import testHelper from '@tyriar/heap-tests/insert-tests';
 
 testHelper.run(test, Heap);
