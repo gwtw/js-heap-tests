@@ -8,14 +8,14 @@ module.exports.run = function (test, Heap) {
     heap.insert(3, null);
     heap.insert(4, null);
     heap.insert(5, null);
-    t.same(heap.size(), 5);
+    t.deepEqual(heap.size(), 5);
   });
 
   test('should return the inserted node', function (t) {
     var heap = new Heap();
     var ret = heap.insert(1, {foo: 'bar'});
     t.is(ret.key, 1);
-    t.same(ret.value, {foo: 'bar'});
+    t.deepEqual(ret.value, {foo: 'bar'});
   });
 
   test('should insert multiple items with the same key', function (t) {

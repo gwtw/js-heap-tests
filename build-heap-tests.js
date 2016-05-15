@@ -17,13 +17,13 @@ module.exports.run = function (test, Heap) {
   });
 
   test('should not throw if constructing with undefined values', function (t) {
-    t.doesNotThrow(wrapBuildHeap([1]));
+    t.notThrows(wrapBuildHeap([1]));
   });
 
   test('should not throw if constructing with same number of keys and values', function (t) {
-    t.doesNotThrow(wrapBuildHeap([], []));
-    t.doesNotThrow(wrapBuildHeap([1], [1]));
-    t.doesNotThrow(wrapBuildHeap([1, 2], [1, 2]));
+    t.notThrows(wrapBuildHeap([], []));
+    t.notThrows(wrapBuildHeap([1], [1]));
+    t.notThrows(wrapBuildHeap([1, 2], [1, 2]));
   });
 
   test('should construct a valid heap with keys only', function (t) {

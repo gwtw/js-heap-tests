@@ -22,7 +22,7 @@ module.exports.run = function (test, Heap) {
     heap.insert(2, null);
     heap.decreaseKey(node1, -3);
     var key = heap.findMinimum().key;
-    t.same(key, node1.key);
+    t.deepEqual(key, node1.key);
     t.is(key, -3);
   });
 
@@ -32,7 +32,7 @@ module.exports.run = function (test, Heap) {
     var node2 = heap.insert(2, null);
     heap.decreaseKey(node2, -3);
     var key = heap.findMinimum().key;
-    t.same(key, node2.key);
+    t.deepEqual(key, node2.key);
     t.is(key, -3);
   });
 
@@ -48,6 +48,6 @@ module.exports.run = function (test, Heap) {
     heap.insert(-10, null);
     heap.insert(16, null);
     heap.decreaseKey(node5, -11);
-    t.same(heap.findMinimum().key, node5.key);
+    t.deepEqual(heap.findMinimum().key, node5.key);
   });
 };

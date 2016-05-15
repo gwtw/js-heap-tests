@@ -9,11 +9,11 @@ module.exports.run = function (test, Heap) {
     var node1 = heap.insert('a', null);
     var node5 = heap.insert('q', null);
     t.is(heap.size(), 5);
-    t.same(heap.extractMinimum().key, node1.key);
-    t.same(heap.extractMinimum().key, node2.key);
-    t.same(heap.extractMinimum().key, node3.key);
-    t.same(heap.extractMinimum().key, node4.key);
-    t.same(heap.extractMinimum().key, node5.key);
+    t.deepEqual(heap.extractMinimum().key, node1.key);
+    t.deepEqual(heap.extractMinimum().key, node2.key);
+    t.deepEqual(heap.extractMinimum().key, node3.key);
+    t.deepEqual(heap.extractMinimum().key, node4.key);
+    t.deepEqual(heap.extractMinimum().key, node5.key);
     t.true(heap.isEmpty());
   });
 
