@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GrowingWithTheWeb/js-heap-tests.git"
+    "url": "https://github.com/gwtw/js-heap-tests.git"
   },
   "author": "Daniel Imms (http://www.growingwiththeweb.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GrowingWithTheWeb/js-heap-tests/issues"
+    "url": "https://github.com/gwtw/js-heap-tests/issues"
   },
-  "homepage": "https://github.com/GrowingWithTheWeb/js-heap-tests",
+  "homepage": "https://github.com/gwtw/js-heap-tests",
   "devDependencies": {
     "eslint-plugin-ava": "^2.3.1",
     "xo": "^0.15.0"
