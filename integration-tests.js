@@ -32,7 +32,7 @@ module.exports.run = function (test, Heap) {
   test('should give an empty heap after inserting and extracting 1000 reversed elements', function (t) {
     var heap = new Heap();
     var i;
-    for (i = 0; i < 1000; i++) {
+    for (i = 999; i >= 0; i--) {
       heap.insert(i, i);
     }
     for (i = 0; i < 1000; i++) {
